@@ -10,4 +10,64 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {title: Language Construct Practice Test}
 startup_form: Form1
+db_schema:
+  hebrew_roots:
+    client: none
+    server: full
+    columns:
+    - name: root
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: category
+      admin_ui: {width: 200}
+      type: link_single
+      target: hebrew_categories
+    title: hebrew_roots
+  hebrew_categories:
+    client: none
+    server: full
+    columns:
+    - name: name
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: description
+      type: string
+      admin_ui: {width: 200, order: 1}
+    title: hebrew_categories
+  hebrew_conjugations:
+    client: none
+    server: full
+    columns:
+    - name: category
+      admin_ui: {width: 200}
+      type: link_single
+      target: hebrew_categories
+    - name: conjugation
+      admin_ui: {width: 200}
+      type: string
+    - name: gender
+      admin_ui: {width: 200}
+      type: string
+    - name: number
+      admin_ui: {width: 200}
+      type: string
+    - name: person
+      admin_ui: {width: 200}
+      type: number
+    - name: stem
+      admin_ui: {width: 200}
+      type: link_single
+      target: hebrew_stems
+    - name: template
+      admin_ui: {width: 200}
+      type: string
+    title: hebrew_conjugations
+  hebrew_stems:
+    title: hebrew_stems
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
 renamed: true
