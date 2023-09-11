@@ -52,10 +52,10 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: person
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.5, width: 200}
       type: number
     - name: stem
-      admin_ui: {width: 200}
+      admin_ui: {order: 0.5, width: 200}
       type: link_single
       target: hebrew_stems
     - name: template
